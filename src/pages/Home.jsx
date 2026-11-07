@@ -20,12 +20,17 @@ export default function Home() {
         <div className="mt-8 flex flex-wrap gap-3">
 
           {idUsuario ? (
-            <Link to="/ocorrencias/nova" className="rounded-xl bg-emerald-700 px-5 py-3 font-semibold text-white shadow-sm transition hover:bg-emerald-800">
-              Registrar ocorrência
-            </Link>
+            <div className='flex flex-col'>
+              <Link to="/mapa/Bairro" className="mb-5 rounded-xl bg-emerald-700 px-5 py-3 font-semibold text-white shadow-sm transition hover:bg-emerald-800">
+                Visualizar Mapa
+              </Link>
+              <Link to="/ocorrencias/nova" className="rounded-xl borderborder-slate-300 bg-white px-5 py-3 font-semibold text-slate-700 transition hover:bg-slate-100">
+                Registrar ocorrência
+              </Link>
+            </div>
           ) : (
 
-            <Link to="/cadastro" className="rounded-xl border border-slate-300 bg-white px-5 py-3 font-semibold text-slate-700 transition hover:bg-slate-100">
+            <Link to="/cadastro" className="rounded-xl border border-slate-600 bg-white px-5 py-3 font-semibold text-slate-700 transition hover:bg-slate-100">
               Participar da comunidade
             </Link>
           )}
